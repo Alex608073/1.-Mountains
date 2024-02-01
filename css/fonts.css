@@ -1,0 +1,52 @@
+/* icons */
+@font-face {
+    font-family: 'icons';
+    src: url('../fonts/icons/fa-light-300.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'icons';
+    src: url('../fonts/icons/fa-regular-400.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'icons';
+    src: url('../fonts/icons/fa-solid-900.ttf') format('truetype');
+    font-weight: 900;
+}
+
+/* icons-brands */
+@font-face {
+    font-family: 'icons-brands';
+    src: url('../fonts/icons/fa-brands-400.ttf') format('truetype');
+    font-weight: 400;
+}
+
+/* Chronicle Display */
+@font-face {
+    font-family: 'Chronicle Display';
+    src: url('../fonts/Chronicle-Display-Bold.otf') format('opentype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Chronicle Display';
+    src: url('../fonts/Chronicle-Display-Semibold.otf') format('opentype');
+    font-weight: 600;
+}
+
+/* Gilroy */
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroy-medium.ttf') format('truetype');
+    font-weight: 500;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroy-bold.ttf') format('truetype');
+    font-weight: 700;
+}
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/gilroy-extrabold.ttf') format('truetype');
+    font-weight: 800;
+}

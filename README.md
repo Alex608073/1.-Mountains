@@ -1,0 +1,1 @@
+Work on the layout of a web page, with adaptation and animation. The layout of the site is based on the link: https://www.figma.com/file/pAPT3TZCOw6uBqvjslekSL/MNTN---Landing-Page -(Community)-(Copy)?node-id=0%3A1&mode=dev

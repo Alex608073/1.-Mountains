@@ -3,6 +3,9 @@
 * {
     box-sizing: border-box;
 }
+ul {
+    list-style: none;
+}
 
 :root {
     --chronicleDisplay: 'Chronicle Display';
@@ -37,6 +40,11 @@ a:hover,
     position: relative;
 }
 
+.header__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
 .header__nav {
     display: flex;
     justify-content: space-between;
@@ -46,6 +54,8 @@ a:hover,
 
     z-index: 1;
     position: relative;
+
+    min-width: 1760px;
 }
 
 .logo {
@@ -108,13 +118,18 @@ a:hover,
 
     z-index: 1;
     position: relative;
+
+    /* Временный контент здесь - начало */
+    margin-bottom: 1000px;
+    /* Временный контент здесь - конец */
 }
+
 .socials {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 
-    position: absolute;
+    position: fixed;
     left: 0;
 }
 .socials__item {
@@ -143,9 +158,6 @@ a:hover,
     font-size: 24px;
 }
 
-.header {
-    position: relative;
-}
 .body-bg__item {
     position: absolute;
     width: 100%;
@@ -193,7 +205,7 @@ a:hover,
 
     margin-bottom: 32px;
 }
-.header__subtitle::before {
+.decorated-subtitle::before {
     content: '';
     display: block;
     width: 72px;
@@ -275,10 +287,163 @@ a:hover,
     color: var(--accent);
 }
 
-/* Эксперименты */
-.main {
-    font-size: 30px;
-    color: transparent;
+/* main */
+.mountain-section {
+    display: flex;
+    margin-bottom: 200px;
+
+    position: relative;
+    z-index: 30;
+}
+.mountain-section:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+.mountain-section:nth-child(odd) .mountain-description {
+    padding: 140px 0 140px 150px;
+    margin-right: 114px;
+}
+.mountain-section:nth-child(even) .mountain-description {
+    padding: 140px 0 140px 150px;
+    margin-left: 114px;
+}
+.mountain-image {
+    max-width: 566px;
+    max-height: 720px;
+}
+.mountain-description {
+    position: relative;
+}
+.mountain-subtitle {
+    color: var(--Accent, #FBD784);
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+
+    display: flex;
+    align-items: center;
+    margin-bottom: 27px;
+}
+.mountain-title {
+    color: #FFF;
+    font-family: "Chronicle Display";
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+
+    margin-bottom: 27px;
+}
+.mountain-txt {
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 177.778% */
+
+    margin-bottom: 27px;
+}
+.mountain-more {
+    color: var(--Accent, #FBD784);
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.description-with-number::before {
+    color: rgba(255, 255, 255, 0.1);
+    font-family: Gilroy;
+    font-size: 240px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 240px; /* 100% */
+
+    position: absolute;
+    z-index: 0;
+
+    top: 38px;
+    left: 0;
+}
+.mountain-section:nth-child(1) .description-with-number:before {
+    content: '01';
+}
+.mountain-section:nth-child(2) .description-with-number:before {
+    content: '02';
+}
+.mountain-section:nth-child(3) .description-with-number:before {
+    content: '03';
+}
+
+/* footer */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 70px;
+}
+
+.footer__company-info {
+    display: flex;
+    flex-direction: column;
+}
+.footer__slogan {
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 177.778% */
+
+    max-width: 303px;
+    margin-top: 24px;
+}
+.footer__copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 177.778% */
+
+    margin-top: auto;
+}
+.footer__site-map {
+    display: flex;
+
+    max-width: 566px;
+}
+.footer__sitemap-section {
+    display: flex;
+    flex-direction: column;
+
+}
+.footer__sitemap-section:not(:last-child) {
+    margin-right: 212px;
+}
+.footer__sitemap-title {
+    color: var(--Accent, #FBD784);
+    font-family: Gilroy;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 133.333% */
+
+    margin-bottom: 24px;
+}
+.footer__sitemap-link {
+    color: #FFF;
+    font-family: Gilroy;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px; /* 177.778% */
+
+    margin-bottom: 16px;
 }
 
 @media (max-width: 3999.9px) {
@@ -293,6 +458,9 @@ a:hover,
     }
     .body-bg__item--bottom-shading {
         height: 800px;
+    }
+    .container {
+        max-width: 1486px;
     }
 }
 @media (max-width: 1999.9px) {

@@ -6,11 +6,13 @@ let bgBottomShading = document.querySelector('.body-bg__item--bottom-shading')
 
 window.onload = function() {
     calculateContentMarginRight();
+    calculateSocialsMarginLeft();
     calculateBgBottomShadingEdgeBottom();
 }
 
 window.addEventListener('resize', function() {
     calculateContentMarginRight();
+    calculateSocialsMarginLeft();
     calculateBgBottomShadingEdgeBottom();
 
 }, true)
@@ -28,8 +30,9 @@ function calculateElementMargin() {
     let windowScreenWidth = window.innerWidth;
     let elementSideMargin;
     switch (true) {
+        // 1760px
         case windowScreenWidth > 1400:
-            elementSideMargin = (windowScreenWidth - 1320)/2 + 12;
+            elementSideMargin = (windowScreenWidth - 1760)/2 + 12;
             break;
         case windowScreenWidth > 1200:
             elementSideMargin = (windowScreenWidth - 1140)/2 + 12;
